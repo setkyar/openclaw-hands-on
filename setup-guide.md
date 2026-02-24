@@ -38,7 +38,21 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDER+t+pCERmQtr1z/nM5CRPZKeEF66oyF/MG
 
 Then log out and log back in as `clawuser`.
 
-## 6. Install OpenClaw
+## 6. Configure UFW Firewall
+```bash
+sudo ufw allow 80
+sudo ufw allow 443
+sudo ufw limit 22/tcp
+sudo ufw enable
+sudo ufw status
+```
+
+Expected rules:
+- `80` allow
+- `443` allow
+- `22/tcp` limit
+
+## 7. Install OpenClaw
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
@@ -49,12 +63,12 @@ You will need to install gateway if you
 openclaw gateway install
 ```
 
-## 7. Start Gateway
+## 8. Start Gateway
 ```bash
 openclaw gateway --port 18789 --verbose
 ```
 
-## 8. Create SSH Tunnel to Access UI
+## 9. Create SSH Tunnel to Access UI
 ```bash
 ssh -L 18789:127.0.0.1:18789 clawuser@YOUR_IP
 ```
@@ -62,14 +76,14 @@ ssh -L 18789:127.0.0.1:18789 clawuser@YOUR_IP
 Open:
 - http://127.0.0.1:18789
 
-## 9. Open Dashboard
+## 10. Open Dashboard
 If you are trying to connect and cannot find the token, run:
 
 ```bash
 openclaw dashboard
 ```
 
-## 10. Troubleshooting
+## 11. Troubleshooting
 Run:
 
 ```bash

@@ -10,10 +10,14 @@ mdc: true
 ---
 
 # OpenClaw on DigitalOcean
-## Practical Guide
+## Setting up agents
 
 Set Kyar Wa Lar  
 Fullstack Engineer
+
+<!--
+Setting up agents
+-->
 
 ---
 
@@ -24,6 +28,17 @@ Fullstack Engineer
 - Agents can run tools (files, shell, browser) in your own environment
 - You control config, integrations, and execution runtime
 
+<!--
+It's AI assistant that have access to your computer and you can ask it to do things for you.
+
+Self hosted, so it store memory, can handle failovers, etc... (gemini, if failed, use claude)
+
+Example usages...
+You can ask it to manage social media, email, etc...
+
+Anyone use openclaw before? Can you share your usage?
+-->
+
 ---
 
 # OpenClaw vs Claude Code
@@ -32,6 +47,20 @@ Fullstack Engineer
 - OpenClaw focuses on multi-channel routing + agent operations
 - OpenClaw supports per-agent workspace, policy, and identity setup
 - Best summary: OpenClaw gives more infra/control surface; Claude Code is simpler to start
+
+<!--
+Claude Code is like coding focus.
+
+OpenClaw can create multiple personality. Like Health, Work, etc...
+(They called it Workspaces)
+
+Run it on your own infra. Local, private cloud etc..
+
+infra/control surface
+- workspace, policy, identity
+
+CC operate under one single identity
+-->
 
 ---
 
@@ -51,7 +80,7 @@ Fullstack Engineer
 
 ## Sign-up + guide
 - Referral: https://m.do.co/c/47a95fdf065e
-- Setup guide: http://github.com/setkyar/openclaw-hands-on/setup-guide.md
+- Setup guide: https://github.com/setkyar/openclaw-hands-on/blob/main/setup-guide.md
 
 ---
 layout: center
@@ -108,6 +137,10 @@ https://m.do.co/c/47a95fdf065e
 - Never grant elevated/host access to unknown senders
 - Keep secrets out of markdown files and rotate keys regularly
 
+<!--
+- We got concerns
+-->
+
 ---
 layout: center
 class: text-center
@@ -115,3 +148,7 @@ class: text-center
 
 # Thank you
 ## Any questions?
+
+<!--
+Explain shortcuts - https://github.com/setkyar/openclaw-hands-on/blob/main/cheatsheet.md
+-->
